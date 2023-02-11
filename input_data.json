@@ -1,6 +1,6 @@
 { 
 "broker_or_agent_code": "86685",
-"sub_broker": "Rajesh Sharma", 
+"sub_broker": "Shivam Pandey", 
 "euin_no": "12345",
 "client_name": "Mihir Jadhav",
 "pancard_no": "BUDPJ5317B",
@@ -93,8 +93,6 @@
 "mobile_no2": "89877654432",
 "unique_client_code_ucc": "CLIENT1234",
 "email_id2": "think@gmail.com",
-"pg2ChkFrequency": "None",
-"pg2Chkdebittypemax": "None",
 "until_cancelled": "Yes",
 "sponsor_bank_code": "CITI000PIGW",
 "utility_code": "CITI00002000000037",
@@ -109,6 +107,12 @@
 "frequency_quaterly" : "Yes",
 "frequency_halfyearly": "No",
 "frequency_yearly": "No",
-"frequency_as_when_presented": "No" 
+"frequency_as_when_presented": "No" ,
+"SB": "No",
+"CA":"Yes",
+"CC": "No",
+"SB-NRE" : "No",
+"SB-NRO": "No",
+"Other": "No"
 
 }
