@@ -1,0 +1,543 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "PDF API"
+    },
+    "basePath": "/",
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/fill-pdf-form-data": {
+        "post": {
+          "summary": "Generate PDF",
+          "description": "This API generates a PDF by filling the input fields in the given PDF",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "The input data to fill in the fields of the PDF",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "broker_or_agent_code": {
+                    "type": "string",
+                    "description": "broker_or_agent_code"
+                  },
+                  "client_name": {
+                    "type": "string",
+                    "description": "The name of the client"
+                  },
+                  "sub_broker": {
+                    "type": "string",
+                    "description": "The name of the Sub-Broker"
+                  },
+                  "euin_no": {
+                    "type": "string",
+                    "description": "EUIN number"
+                  },
+                  "pancard_no": {
+                    "type": "string",
+                    "description": "PanCard number"
+                  },
+                  "KYC": {
+                    "type": "string",
+                    "description": "KYC number"
+                  },
+                  "date_of_birth": {
+                    "type": "string",
+                    "description": "dd/mm/yyyy"
+                  },
+                  "father_name": {
+                    "type": "string",
+                    "description": "father_name"
+                  },
+                  "mother_name": {
+                    "type": "string",
+                    "description": "mother_name"
+                  },
+                  "gaurdian_name": {
+                    "type": "string",
+                    "description": "gaurdian_name"
+                  },
+                  "gaurdian_pancard_no": {
+                    "type": "string",
+                    "description": "gaurdian_pancard_no"
+                  },
+                  "address1": {
+                    "type": "string",
+                    "description": "address1"
+                  },
+                  "address2": {
+                    "type": "string",
+                    "description": "address2"
+                  },
+                  "city": {
+                    "type": "string",
+                    "description": "city"
+                  },
+                  "pincode": {
+                    "type": "string",
+                    "description": "pincode"
+                  },
+                  "state": {
+                    "type": "string",
+                    "description": "state"
+                  },
+                  "country": {
+                    "type": "string",
+                    "description": "country"
+                  },
+                  "office_telephone_no": {
+                    "type": "string",
+                    "description": "office_telephone_no"
+                  },
+                  "residence_telephone_no": {
+                    "type": "string",
+                    "description": "address1"
+                  },
+                  "email_id": {
+                    "type": "string",
+                    "description": "email_id"
+                  },
+                  "office_fax_no": {
+                    "type": "string",
+                    "description": "office_fax_no"
+                  },
+                  "residence_fax_no": {
+                    "type": "string",
+                    "description": "residence_fax_no"
+                  },
+                  "mobile_no": {
+                    "type": "string",
+                    "description": "mobile_no"
+                  },
+                  "income_tax_slab": {
+                    "type": "string",
+                    "description": "income_tax_slab"
+                  },
+                  "place_of_birth": {
+                    "type": "string",
+                    "description": "place_of_birth"
+                  },
+                  "occupation_details": {
+                    "type": "string",
+                    "description": "occupation_details"
+                  },
+                  "ressident_tax": {
+                    "type": "string",
+                    "description": "ressident_tax"
+                  },
+                  "tax_id_no": {
+                    "type": "string",
+                    "description": "tax_id_no"
+                  },
+                  "mode_of_holding": {
+                    "type": "string",
+                    "description": "mode_of_holding"
+                  },
+                  "occupation1": {
+                    "type": "string",
+                    "description": "occupation1"
+                  },
+                  "second_applicant_name": {
+                    "type": "string",
+                    "description": "second_applicant_name"
+                  },
+                  "pancard_no2": {
+                    "type": "string",
+                    "description": "pancard_no2"
+                  },
+                  "KYC2": {
+                    "type": "string",
+                    "description": "KYC2"
+                  },
+                  "date_of_birth2": {
+                    "type": "string",
+                    "description": "date_of_birth2"
+                  },
+                  "income_tax_slab2": {
+                    "type": "string",
+                    "description": "income_tax_slab2"
+                  },
+                  "place_of_birth2": {
+                    "type": "string",
+                    "description": "place_of_birth2"
+                  },
+                  "occupation_details2": {
+                    "type": "string",
+                    "description": "occupation_details2"
+                  },
+                  "tax_ressident2": {
+                    "type": "string",
+                    "description": "tax_ressident2"
+                  },
+                  "tax_id_no2": {
+                    "type": "string",
+                    "description": "place_of_birth2"
+                  },
+                  "country_of_tax_residence2": {
+                    "type": "string",
+                    "description": "country_of_tax_residence2"
+                  },
+                  "third_applicant_name": {
+                    "type": "string",
+                    "description": "third_applicant_name"
+                  },
+                  "pancard_no3": {
+                    "type": "string",
+                    "description": "pancard_no3"
+                  },
+                  "KYC3": {
+                    "type": "string",
+                    "description": "KYC3"
+                  },
+                  "place_of_birth3": {
+                    "type": "string",
+                    "description": "place_of_birth3"
+                  },
+                  "date_of_birth3": {
+                    "type": "string",
+                    "description": "date_of_birth3"
+                  },
+                  "income_tax_slab3": {
+                    "type": "string",
+                    "description": "income_tax_slab3"
+                  },
+                  "occupation_details3": {
+                    "type": "string",
+                    "description": "occupation_details3"
+                  },
+                  "ressident_tax3": {
+                    "type": "string",
+                    "description": "ressident_tax3"
+                  },
+                  "tax_id_no3": {
+                    "type": "string",
+                    "description": "tax_id_no3"
+                  },
+                  "overseas_address": {
+                    "type": "string",
+                    "description": "overseas_address"
+                  },
+                 
+                  "city_name_other": {
+                    "type": "string",
+                    "description": "city_name_other"
+                  },
+                 
+                  "other_pin_code": {
+                    "type": "string",
+                    "description": "overseas_address"
+                  },
+                 
+                  "country_other": {
+                    "type": "string",
+                    "description": "country_other"
+                  },
+                 
+                  "bank_name": {
+                    "type": "string",
+                    "description": "bank_name"
+                  },
+                 
+                  "branch_name": {
+                    "type": "string",
+                    "description": "branch_name"
+                  },
+                  "bank_account_no": {
+                    "type": "string",
+                    "description": "bank_account_no"
+                  },
+                  "account_type": {
+                    "type": "string",
+                    "description": "account_type"
+                  },
+                  "bank_ifsci_code": {
+                    "type": "string",
+                    "description": "bank_ifsci_code"
+                  },
+                  "branch_address": {
+                    "type": "string",
+                    "description": "branch_address"
+                  },
+                  "bank_city": {
+                    "type": "string",
+                    "description": "bank_city"
+                  },
+                 
+                  "bank_pincode": {
+                    "type": "string",
+                    "description": "bank_pincode"
+                  },
+                 
+                  "bank_state": {
+                    "type": "string",
+                    "description": "bank_state"
+                  },
+                 
+                  "bank_country": {
+                    "type": "string",
+                    "description": "bank_country"
+                  },
+                 
+                  "nominee_name": {
+                    "type": "string",
+                    "description": "nominee_name"
+                  },
+                 
+                  "relationship": {
+                    "type": "string",
+                    "description": "relationship"
+                  },
+                 
+                  "gaurdian_name2": {
+                    "type": "string",
+                    "description": "gaurdian_name2"
+                  },
+                 
+                  "nominee_address1": {
+                    "type": "string",
+                    "description": "nominee_address1"
+                  },
+                 
+                  "nominee_address2": {
+                    "type": "string",
+                    "description": "nominee_address2"
+                  },
+                 
+                  "nominee_city": {
+                    "type": "string",
+                    "description": "nominee_city"
+                  },
+                 
+                  "nominee_pincode": {
+                    "type": "string",
+                    "description": "nominee_pincode"
+                  },
+                 
+                  "nominee_country": {
+                    "type": "string",
+                    "description": "nominee_country"
+                  },
+                 
+                  "date": {
+                    "type": "string",
+                    "description": "date"
+                  },
+                 
+                  "place": {
+                    "type": "string",
+                    "description": "place"
+                  },
+                 
+                  "umrn_no": {
+                    "type": "string",
+                    "description": "umrn_no"
+                  },
+                 
+                  "date_2": {
+                    "type": "string",
+                    "description": "date_2"
+                  },
+                 
+                  "bank_account_no2": {
+                    "type": "string",
+                    "description": "bank_account_no2"
+                  },
+                 
+                  "bank_name2": {
+                    "type": "string",
+                    "description": "bank_name2"
+                  },
+                 
+                  "bank_ifsci_code2": {
+                    "type": "string",
+                    "description": "bank_ifsci_code2"
+                  },
+                  "bank_micr2": {
+                    "type": "string",
+                    "description": "bank_micr2"
+                  },
+                  "amount2": {
+                    "type": "string",
+                    "description": "amount2"
+                  },
+                  "mandate_reference_no": {
+                    "type": "string",
+                    "description": "mandate_reference_no"
+                  },
+                  "mobile_no2": {
+                    "type": "string",
+                    "description": "mobile_no2"
+                  },
+                  "unique_client_code_ucc": {
+                    "type": "string",
+                    "description": "unique_client_code_ucc"
+                  },
+                  "email_id2": {
+                    "type": "string",
+                    "description": "email_id2"
+                  },
+                  "until_cancelled": {
+                    "type": "string",
+                    "description": "until_cancelled"
+                  },
+                  "sponsor_bank_code": {
+                    "type": "string",
+                    "description": "sponsor_bank_code"
+                  },
+                  "utility_code": {
+                    "type": "string",
+                    "description": "utility_code"
+                  },
+                 
+                  "debit_fixed_amount": {
+                    "type": "string",
+                    "description": "debit_fixed_amount"
+                  },
+                 
+                  "debit_maximum_amount": {
+                    "type": "string",
+                    "description": "debit_maximum_amount"
+                  },
+                 
+                  "period_from": {
+                    "type": "string",
+                    "description": "Period from"
+                  },
+                  "period_to": {
+                    "type": "string",
+                    "description": "Period to"
+                  },
+                  "CREATE": {
+                    "type": "string",
+                    "description": "Create checkbox"
+                  },
+                  "MODIFY": {
+                    "type": "string",
+                    "description": "Modify checkbox"
+                  },
+                  "CANCEL": {
+                    "type": "string",
+                    "description": "Cancel checkbox"
+                  },
+                  "frequency_monthly": {
+                    "type": "string",
+                    "description": "Frequency monthly checkbox"
+                  },
+                  "frequency_quaterly": {
+                    "type": "string",
+                    "description": "Frequency quarterly checkbox"
+                  },
+                  "frequency_halfyearly": {
+                    "type": "string",
+                    "description": "Frequency half-yearly checkbox"
+                  },
+                  "frequency_yearly": {
+                    "type": "string",
+                    "description": "Frequency yearly checkbox"
+                  },
+                  "frequency_as_when_presented": {
+                    "type": "string",
+                    "description": "Frequency as when presented checkbox"
+                  },
+                  "SB": {
+                    "type": "string",
+                    "description": "SB"
+                  },
+                  "CA": {
+                    "type": "string",
+                    "description": "CA"
+                  },
+                  "CC": {
+                    "type": "string",
+                    "description": "CC"
+                  },
+                  "SB-NRE": {
+                    "type": "string",
+                    "description": "SB-NRE"
+                  },
+                  "SB-NRO": {
+                    "type": "string",
+                    "description": "SB-NRO"
+                  },
+                  "Other": {
+                    "type": "string",
+                    "description": "Other"
+                  },
+                  "political_exposed_person_or_related1_yes": {
+                    "type": "string",
+                    "description": "political_exposed_person_or_related1_yes"
+                  },
+                  "political_exposed_person_or_related1_no": {
+                    "type": "string",
+                    "description": "political_exposed_person_or_related1_no"
+                  },
+                  "political_exposed_person_or_related2_yes": {
+                    "type": "string",
+                    "description": "political_exposed_person_or_related2_yes"
+                  },
+                  "political_exposed_person_or_related2_no": {
+                    "type": "string",
+                    "description": "political_exposed_person_or_related2_no"
+                  },
+                  "political_exposed_person_or_related3_yes": {
+                    "type": "string",
+                    "description": "political_exposed_person_or_related3_yes"
+                  },
+                  "political_exposed_person_or_related3_no": {
+                    "type": "string",
+                    "description": "political_exposed_person_or_related3_no"
+                  },
+                                   
+                  "signature1": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "Signature 1"
+                  },
+                  "signature2": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "Signature 2"
+                  },
+                  "signature3": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "Signature 3"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "final_pdf_name": {
+                    "type": "string",
+                    "description": "The name of the generated PDF file"
+                  },
+                  "s3_url": {
+                    "type": "string",
+                    "description": "The S3 URL of the generated PDF file"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

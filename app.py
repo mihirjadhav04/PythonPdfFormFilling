@@ -5,7 +5,7 @@ from fillpdf import fillpdfs
 import shutil
 import boto3
 from bolt.storage import BoltStore, BoltStoreConfig
-
+from flask_swagger_ui import get_swaggerui_blueprint
 storage_config = {
     "PROVIDER": "AWSS3STORAGE",
     "AWSS3STORAGE": {
@@ -21,8 +21,22 @@ bolt_store = BoltStore(storage_config)
 
 app = Flask(__name__)
 
+# Define Swagger UI blueprint - CONFIG
+SWAGGER_URL = '/swagger'  # URL for exposing Swagger UI (without trailing '/')
+API_URL = '/static/swagger.json'  # URL for accessing the API's JSON documentation (without trailing '/')
+SWAGGER_BLUEPRINT = get_swaggerui_blueprint(
+    SWAGGER_URL,
+    API_URL,
+    config={
+        'app_name': "AutoPDF Form-Filler From JSON."
+    }
+)
+app.register_blueprint(SWAGGER_BLUEPRINT, url_prefix=SWAGGER_URL)
+
+
 @app.route('/fill-pdf-form-data', methods=['POST'])
 def generate_pdf():
+    
     input_data = request.get_json()
     pdf_name = "Account Opening Form ARN- BSE STAR MF V 2.0.pdf"
     client_name = input_data.get('client_name')
